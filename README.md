@@ -1,6 +1,6 @@
 # CPNS Watch Bot
 
-Bot kecil untuk memantau info CPNS/CASN Indonesia dari sumber resmi seperti BKN, SSCASN, dan KemenPANRB. Output utamanya adalah laporan Markdown di `reports/latest.md`; opsional bisa kirim ringkasan ke Telegram atau Discord.
+Bot kecil untuk memantau info CPNS/CASN Indonesia tahun 2026 dari sumber resmi seperti BKN, SSCASN, dan KemenPANRB. Output utamanya adalah ringkasan Markdown di `reports/latest.md`; opsional bisa kirim ringkasan ke Telegram, email SMTP, atau Discord.
 
 ## Jalankan Lokal
 
@@ -44,7 +44,7 @@ Kalau mau notifikasi, isi `Settings > Secrets and variables > Actions > New repo
 - `EMAIL_USERNAME`
 - `EMAIL_PASSWORD`
 - `EMAIL_FROM`
-- `EMAIL_TO`
+- `EMAIL_TO` (penerima, misalnya `fputraanvy@gmail.com`)
 - `EMAIL_USE_TLS`
 - atau `DISCORD_WEBHOOK_URL`
 
