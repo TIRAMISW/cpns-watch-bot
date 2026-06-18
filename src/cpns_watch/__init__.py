@@ -1,0 +1,1 @@
+"""CPNS watch bot package."""
