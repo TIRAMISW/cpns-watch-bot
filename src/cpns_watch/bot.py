@@ -24,6 +24,7 @@ from bs4 import BeautifulSoup
 DEFAULT_CONFIG = Path("config/sources.json")
 DEFAULT_SEEN = Path("data/seen.json")
 DEFAULT_REPORT = Path("reports/latest.md")
+DEFAULT_TARGET_YEAR = 2026
 USER_AGENT = "cpns-watch-bot/1.0 (+https://sscasn.bkn.go.id/)"
 IGNORED_LINK_TITLES = {
     "skip to main content",
@@ -236,6 +237,7 @@ def extract_date(text: str) -> str:
 def collect_items(config: dict) -> tuple[list[Item], list[str]]:
     keywords = config.get("keywords", [])
     context_keywords = config.get("context_keywords", [])
+    target_year = int(config.get("target_year") or DEFAULT_TARGET_YEAR)
     all_items: list[Item] = []
     errors: list[str] = []
 
@@ -250,9 +252,14 @@ def collect_items(config: dict) -> tuple[list[Item], list[str]]:
 
     unique: dict[str, Item] = {}
     for item in all_items:
-        if item.url not in unique:
+        if item.url not in unique and item_matches_year(item, target_year):
             unique[item.url] = item
     return list(unique.values()), errors
+
+
+def item_matches_year(item: Item, target_year: int) -> bool:
+    haystack = f"{item.title} {item.published} {item.snippet} {item.url}"
+    return str(target_year) in haystack
 
 
 def mark_new(items: list[Item], seen_path: Path) -> tuple[list[Item], dict]:
@@ -292,34 +299,50 @@ def render_report(items: list[Item], errors: list[str]) -> str:
     timestamp = now_jakarta().strftime("%Y-%m-%d %H:%M:%S %Z")
     new_items = [item for item in items if item.is_new]
     official_items = [item for item in items if item.official]
+    hoax_items = [item for item in items if {"hoaks", "hoax"}.intersection(item.keywords)]
+    apply_items = [
+        item
+        for item in items
+        if {"pendaftaran", "formasi", "sscasn", "cpns", "casn"}.intersection(item.keywords)
+    ]
 
     lines = [
-        "# Laporan Pantauan CPNS/CASN",
+        "# Ringkasan Pantauan CPNS/CASN 2026",
         "",
         f"Dibuat: {timestamp}",
         "",
-        f"Temuan baru: **{len(new_items)}**",
-        f"Total item relevan: **{len(items)}**",
+        f"Temuan baru 2026: **{len(new_items)}**",
+        f"Total item 2026 terpantau: **{len(items)}**",
         "",
-        "## Ringkasan",
+        "## Kesimpulan Hari Ini",
         "",
     ]
 
     if new_items:
-        for item in new_items[:15]:
-            lines.extend(format_item(item))
+        lines.append(f"- Ada {len(new_items)} temuan baru terkait CPNS/CASN tahun 2026 dari sumber resmi.")
     else:
-        lines.append("Belum ada item baru sejak run terakhir.")
+        lines.append("- Belum ada temuan baru terkait CPNS/CASN 2026 sejak run terakhir.")
+    if hoax_items:
+        lines.append(f"- Ada {len(hoax_items)} item bertema hoaks/anti-hoaks yang perlu diperhatikan.")
+    if apply_items:
+        lines.append("- Informasi pendaftaran/formasi tetap harus dicek ulang di portal resmi SSCASN dan pengumuman instansi.")
+    lines.extend(["", "## Temuan Baru 2026", ""])
+
+    if new_items:
+        for item in new_items[:10]:
+            lines.extend(format_summary_item(item))
+    else:
+        lines.append("Tidak ada temuan baru 2026.")
         lines.append("")
 
     lines.extend(
         [
-            "## Semua Sumber Resmi Terdeteksi",
+            "## Pantauan 2026 dari Sumber Resmi",
             "",
         ]
     )
-    for item in official_items[:40]:
-        lines.extend(format_item(item, compact=True))
+    for item in official_items[:25]:
+        lines.extend(format_summary_item(item))
 
     lines.extend(
         [
@@ -335,7 +358,7 @@ def render_report(items: list[Item], errors: list[str]) -> str:
             "",
             "## Catatan Anti-Hoaks",
             "",
-            "Anggap belum resmi kalau informasi tidak muncul di BKN, SSCASN, atau KemenPANRB. Jangan bayar oknum dan jangan masukkan data pribadi ke link selain portal resmi.",
+            "Anggap belum resmi kalau informasi tidak muncul di BKN, SSCASN, atau KemenPANRB. Jangan bayar oknum, jangan percaya poster/link seleksi yang tidak ada di sumber resmi, dan jangan masukkan data pribadi ke link selain portal resmi.",
             "",
         ]
     )
@@ -347,6 +370,18 @@ def render_report(items: list[Item], errors: list[str]) -> str:
         lines.append("")
 
     return "\n".join(lines)
+
+
+def format_summary_item(item: Item) -> list[str]:
+    prefix = "BARU - " if item.is_new else ""
+    tags = ", ".join(item.keywords) if item.keywords else "monitor"
+    date = f" | Tanggal: {item.published}" if item.published else ""
+    return [
+        f"- **{prefix}{item.title}**",
+        f"  Sumber: {item.source} | Keyword: {tags}{date}",
+        f"  Link: {item.url}",
+        "",
+    ]
 
 
 def format_item(item: Item, compact: bool = False) -> list[str]:
@@ -380,8 +415,10 @@ def notify(report: str) -> None:
         send_telegram(telegram_token, telegram_chat_id, message)
     if discord_webhook_url:
         send_discord(discord_webhook_url, message)
-    if os.getenv("EMAIL_TO"):
+    if os.getenv("EMAIL_TO") and os.getenv("EMAIL_HOST"):
         send_email(report)
+    elif os.getenv("EMAIL_TO"):
+        sys.stderr.write("EMAIL_TO sudah diisi, tapi EMAIL_HOST belum ada; email dilewati.\n")
 
 
 def trim_notification(report: str) -> str:
@@ -429,7 +466,7 @@ def send_email(report: str) -> None:
     use_tls = os.getenv("EMAIL_USE_TLS", "true").casefold() not in {"0", "false", "no"}
 
     message = EmailMessage()
-    message["Subject"] = "Laporan Pantauan CPNS/CASN"
+    message["Subject"] = f"Ringkasan Pantauan CPNS/CASN 2026 - {now_jakarta().strftime('%Y-%m-%d')}"
     message["From"] = sender
     message["To"] = ", ".join(recipients)
     message.set_content(report)
