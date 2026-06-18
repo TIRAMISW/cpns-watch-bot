@@ -1,0 +1,104 @@
+{
+  "keywords": [
+    "cpns",
+    "casn",
+    "sscasn",
+    "formasi",
+    "pendaftaran",
+    "skd",
+    "skb",
+    "pppk",
+    "non-asn",
+    "honorer",
+    "rekrutmen",
+    "pengadaan asn",
+    "kebutuhan asn",
+    "sekolah kedinasan",
+    "hoaks",
+    "hoax"
+  ],
+  "context_keywords": [
+    "asn",
+    "bkn",
+    "seleksi",
+    "pengumuman"
+  ],
+  "sources": [
+    {
+      "name": "BKN Berita",
+      "type": "rss",
+      "url": "https://www.bkn.go.id/category/publikasi/berita/feed/",
+      "official": true
+    },
+    {
+      "name": "BKN Pengumuman",
+      "type": "rss",
+      "url": "https://www.bkn.go.id/category/publikasi/pengumuman/feed/",
+      "official": true
+    },
+    {
+      "name": "BKN Search CPNS",
+      "type": "html",
+      "url": "https://www.bkn.go.id/?s=cpns",
+      "official": true
+    },
+    {
+      "name": "BKN Search CASN",
+      "type": "html",
+      "url": "https://www.bkn.go.id/?s=casn",
+      "official": true
+    },
+    {
+      "name": "BKN Search SSCASN",
+      "type": "html",
+      "url": "https://www.bkn.go.id/?s=sscasn",
+      "official": true
+    },
+    {
+      "name": "KemenPANRB CPNS",
+      "type": "html",
+      "url": "https://www.menpan.go.id/site/berita-terkini/cpns",
+      "official": true
+    },
+    {
+      "name": "KemenPANRB Berita Terkini",
+      "type": "html",
+      "url": "https://www.menpan.go.id/site/berita-terkini",
+      "official": true
+    },
+    {
+      "name": "KemenPANRB Search CPNS",
+      "type": "html",
+      "url": "https://www.menpan.go.id/site/search?searchphrase=all&searchword=cpns",
+      "official": true
+    },
+    {
+      "name": "SSCASN Portal",
+      "type": "html",
+      "url": "https://sscasn.bkn.go.id/",
+      "official": true,
+      "always_include": true
+    },
+    {
+      "name": "SSCASN Formasi",
+      "type": "html",
+      "url": "https://sscasn.bkn.go.id/daftar-formasi/",
+      "official": true,
+      "always_include": true
+    },
+    {
+      "name": "SSCASN FAQ",
+      "type": "html",
+      "url": "https://sscasn.bkn.go.id/faq/",
+      "official": true,
+      "always_include": true
+    },
+    {
+      "name": "SSCASN Buku Petunjuk",
+      "type": "html",
+      "url": "https://sscasn.bkn.go.id/buku-petunjuk/",
+      "official": true,
+      "always_include": true
+    }
+  ]
+}
