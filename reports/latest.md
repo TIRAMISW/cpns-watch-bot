@@ -1,6 +1,6 @@
 # Ringkasan Pantauan CPNS/CASN 2026
 
-Dibuat: 2026-06-20 12:17:37 Asia/Jakarta
+Dibuat: 2026-06-21 13:05:09 Asia/Jakarta
 
 Temuan baru 2026: **0**
 Total item 2026 terpantau: **6**
