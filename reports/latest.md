@@ -1,21 +1,27 @@
 # Ringkasan Pantauan CPNS/CASN 2026
 
-Dibuat: 2026-06-24 12:03:49 Asia/Jakarta
+Dibuat: 2026-07-12 11:26:43 Asia/Jakarta
 
-Temuan baru 2026: **0**
-Total item 2026 terpantau: **6**
+Temuan baru 2026: **1**
+Total item 2026 terpantau: **7**
 
 ## Kesimpulan Hari Ini
 
-- Belum ada temuan baru terkait CPNS/CASN 2026 sejak run terakhir.
-- Ada 2 item bertema hoaks/anti-hoaks yang perlu diperhatikan.
+- Ada 1 temuan baru terkait CPNS/CASN tahun 2026 dari sumber resmi.
+- Ada 3 item bertema hoaks/anti-hoaks yang perlu diperhatikan.
 - Informasi pendaftaran/formasi tetap harus dicek ulang di portal resmi SSCASN dan pengumuman instansi.
 
 ## Temuan Baru 2026
 
-Tidak ada temuan baru 2026.
+- **BARU - BKN Pastikan Akun Palsu di FB Catut Nama Prof. Zudan Sebar Informasi Hoaks PPPK**
+  Sumber: BKN Berita | Keyword: pppk, hoaks, bkn | Tanggal: Thu, 02 Jul 2026 02:06:06 +0000
+  Link: https://www.bkn.go.id/bkn-pastikan-akun-palsu-di-fb-catut-nama-prof-zudan-sebar-informasi-hoaks-pppk/
 
 ## Pantauan 2026 dari Sumber Resmi
+
+- **BARU - BKN Pastikan Akun Palsu di FB Catut Nama Prof. Zudan Sebar Informasi Hoaks PPPK**
+  Sumber: BKN Berita | Keyword: pppk, hoaks, bkn | Tanggal: Thu, 02 Jul 2026 02:06:06 +0000
+  Link: https://www.bkn.go.id/bkn-pastikan-akun-palsu-di-fb-catut-nama-prof-zudan-sebar-informasi-hoaks-pppk/
 
 - **Karo Komlik BKN: Wisudo Putro Nugroho: Poster Pembukaan CPNS 2026 yang Beredar Dipastikan HOAKS**
   Sumber: BKN Search CPNS | Keyword: cpns, hoaks, bkn
