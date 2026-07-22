@@ -1,21 +1,27 @@
 # Ringkasan Pantauan CPNS/CASN 2026
 
-Dibuat: 2026-07-17 11:08:34 Asia/Jakarta
+Dibuat: 2026-07-22 11:18:26 Asia/Jakarta
 
-Temuan baru 2026: **0**
-Total item 2026 terpantau: **6**
+Temuan baru 2026: **1**
+Total item 2026 terpantau: **7**
 
 ## Kesimpulan Hari Ini
 
-- Belum ada temuan baru terkait CPNS/CASN 2026 sejak run terakhir.
+- Ada 1 temuan baru terkait CPNS/CASN tahun 2026 dari sumber resmi.
 - Ada 2 item bertema hoaks/anti-hoaks yang perlu diperhatikan.
 - Informasi pendaftaran/formasi tetap harus dicek ulang di portal resmi SSCASN dan pengumuman instansi.
 
 ## Temuan Baru 2026
 
-Tidak ada temuan baru 2026.
+- **BARU - Dengan CAT BKN,118 Ribu Calon Guru & Tenaga Kependidikan Sekolah Rakyat Berkompetisi secara Transparan**
+  Sumber: BKN Berita | Keyword: pppk, bkn, seleksi | Tanggal: Mon, 20 Jul 2026 02:23:03 +0000
+  Link: https://www.bkn.go.id/dengan-cat-bkn118-ribu-calon-guru-tenaga-kependidikan-sekolah-rakyat-berkompetisi-secara-transparan/
 
 ## Pantauan 2026 dari Sumber Resmi
+
+- **BARU - Dengan CAT BKN,118 Ribu Calon Guru & Tenaga Kependidikan Sekolah Rakyat Berkompetisi secara Transparan**
+  Sumber: BKN Berita | Keyword: pppk, bkn, seleksi | Tanggal: Mon, 20 Jul 2026 02:23:03 +0000
+  Link: https://www.bkn.go.id/dengan-cat-bkn118-ribu-calon-guru-tenaga-kependidikan-sekolah-rakyat-berkompetisi-secara-transparan/
 
 - **Karo Komlik BKN: Wisudo Putro Nugroho: Poster Pembukaan CPNS 2026 yang Beredar Dipastikan HOAKS**
   Sumber: BKN Search CPNS | Keyword: cpns, hoaks, bkn
