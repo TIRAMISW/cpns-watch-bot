@@ -1,9 +1,9 @@
 # Ringkasan Pantauan CPNS/CASN 2026
 
-Dibuat: 2026-07-22 11:18:26 Asia/Jakarta
+Dibuat: 2026-07-23 11:16:55 Asia/Jakarta
 
 Temuan baru 2026: **1**
-Total item 2026 terpantau: **7**
+Total item 2026 terpantau: **8**
 
 ## Kesimpulan Hari Ini
 
@@ -13,13 +13,13 @@ Total item 2026 terpantau: **7**
 
 ## Temuan Baru 2026
 
-- **BARU - Dengan CAT BKN,118 Ribu Calon Guru & Tenaga Kependidikan Sekolah Rakyat Berkompetisi secara Transparan**
-  Sumber: BKN Berita | Keyword: pppk, bkn, seleksi | Tanggal: Mon, 20 Jul 2026 02:23:03 +0000
-  Link: https://www.bkn.go.id/dengan-cat-bkn118-ribu-calon-guru-tenaga-kependidikan-sekolah-rakyat-berkompetisi-secara-transparan/
+- **BARU - Kementerian PANRB Buka 76 Formasi Program Magang Nasional Angkatan 2 Batch 1 Tahun 2026**
+  Sumber: KemenPANRB Berita Terkini | Keyword: formasi
+  Link: https://www.menpan.go.id/site/berita-terkini/kementerian-panrb-buka-76-formasi-program-magang-nasional-angkatan-2-batch-1-tahun-2026
 
 ## Pantauan 2026 dari Sumber Resmi
 
-- **BARU - Dengan CAT BKN,118 Ribu Calon Guru & Tenaga Kependidikan Sekolah Rakyat Berkompetisi secara Transparan**
+- **Dengan CAT BKN,118 Ribu Calon Guru & Tenaga Kependidikan Sekolah Rakyat Berkompetisi secara Transparan**
   Sumber: BKN Berita | Keyword: pppk, bkn, seleksi | Tanggal: Mon, 20 Jul 2026 02:23:03 +0000
   Link: https://www.bkn.go.id/dengan-cat-bkn118-ribu-calon-guru-tenaga-kependidikan-sekolah-rakyat-berkompetisi-secara-transparan/
 
@@ -30,6 +30,10 @@ Total item 2026 terpantau: **7**
 - **Beredar Informasi Seleksi Kemenkes 2026, Prof. Zudan: Itu Hoaks, Rekrutmen ASN Terintegrasi dan Diawasi BKN**
   Sumber: BKN Search SSCASN | Keyword: rekrutmen, hoaks, asn, bkn, seleksi
   Link: https://www.bkn.go.id/beredar-informasi-seleksi-kemenkes-2026-prof-zudan-itu-hoaks-rekrutmen-asn-terintegrasi-dan-diawasi-bkn/
+
+- **BARU - Kementerian PANRB Buka 76 Formasi Program Magang Nasional Angkatan 2 Batch 1 Tahun 2026**
+  Sumber: KemenPANRB Berita Terkini | Keyword: formasi
+  Link: https://www.menpan.go.id/site/berita-terkini/kementerian-panrb-buka-76-formasi-program-magang-nasional-angkatan-2-batch-1-tahun-2026
 
 - **SSCASN Portal**
   Sumber: SSCASN Portal | Keyword: casn, sscasn, formasi, pendaftaran, pppk, asn, bkn, seleksi, pengumuman | Tanggal: 15 Jun 2026
